@@ -2,8 +2,8 @@ package HW_1.Products;
 
 public class Lemonade extends Beverages{//Лимонад
     
-    public Lemonade(String name, Double price, Integer count, String unit, String volume) {
-        super(name, price, count, unit, volume);
+    public Lemonade(String name, Double price, Integer count, String unit, String volume, String expDate) {
+        super(name, price, count, unit, volume, expDate);
     }
 
     public String getName() {
