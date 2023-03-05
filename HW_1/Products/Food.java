@@ -2,7 +2,7 @@ package HW_1.Products;
 
 import HW_1.Product;
 
-public class Food extends Product{//Продукты питания
+public abstract class Food extends Product{//Продукты питания
     private String expDate;
     
     public Food(String name, Double price, Integer count, String unit, String expDate) {

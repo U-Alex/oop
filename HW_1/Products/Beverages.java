@@ -2,7 +2,7 @@ package HW_1.Products;
 
 import HW_1.Product;
 
-public class Beverages extends Product{//Напитки
+public abstract class Beverages extends Product{//Напитки
     private String volume;
     private String expDate;
 

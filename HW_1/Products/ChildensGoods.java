@@ -2,7 +2,7 @@ package HW_1.Products;
 
 import HW_1.Product;
 
-public class ChildensGoods extends Product{//Детские товары
+public abstract class ChildensGoods extends Product{//Детские товары
     private Integer minimumAge;
     private boolean hypoallergenic;
 

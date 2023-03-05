@@ -2,7 +2,7 @@ package HW_1.Products;
 
 import HW_1.Product;
 
-public class HygieneItems extends Product{//Предметы гигиены
+public abstract class HygieneItems extends Product{//Предметы гигиены
     private Integer countIn;
 
     public HygieneItems(String name, Double price, Integer count, String unit, Integer countIn) {
