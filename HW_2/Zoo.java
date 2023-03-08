@@ -22,6 +22,8 @@ public class Zoo {
     //public void addAnimal(Animal ob) {
     //    tmap.put(ob.getId(), ob);
     //}
+        // проверять валидность введенных данных не стал,т.к. предполагается, 
+        // что они уже должны прийти валидные откуданибудь с формы, итд.
     public void addAnimal(int num, String[] p) {
         Animal ob = null;
         if (num == 1)
