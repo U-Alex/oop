@@ -72,9 +72,9 @@ public class Zoo {
 
     public void uniqueActions() {
         for (Map.Entry<Integer, Animal> item : tmap.entrySet()) {
-            if (item.getValue() instanceof Cat) ((Cat)(item.getValue())).ShowAffection();
-            if (item.getValue() instanceof Dog) ((Dog)(item.getValue())).Train();
-            if (item.getValue() instanceof AnimalBird) ((AnimalBird)(item.getValue())).Fly();
+            if (item.getValue() instanceof AnimalPet)   ((AnimalPet)(item.getValue())).ShowAffection();
+            if (item.getValue() instanceof Dog)         ((Dog)(item.getValue())).Train();
+            if (item.getValue() instanceof AnimalBird)  ((AnimalBird)(item.getValue())).Fly();
         }
     }
 
