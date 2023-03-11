@@ -74,4 +74,16 @@ public class UserInput {
         }
         return null;
     }
+    public String[] changeParam(Scanner iScanner, Figure ob) {
+        System.out.printf("текущие параметры: %s\n", ob.getInfo());
+        int num = 0;
+        String name = ob.getName();
+        for (Map.Entry<String, String> item : this.typeList.entrySet()) {
+            if (item.getValue().equals(name)) {
+                num = Integer.parseInt(item.getKey());
+                break;
+            }
+        }
+        return inputParam(iScanner, num);
+    }
 }

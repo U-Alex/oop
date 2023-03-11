@@ -2,8 +2,8 @@ package HW_3;
 
 import java.util.Map;
 import java.util.TreeMap;
+import java.util.stream.Stream;
 import java.util.ArrayList;
-//import java.util.Comparator;
 import java.util.List;
 
 public class Collection {
@@ -45,15 +45,13 @@ public class Collection {
     }
 
     public void infoFigure(int id) {
-        System.out.println(tmap.get(id));
+        System.out.printf("-> %s\n", tmap.get(id).getInfo());
     }
 
     public void infoAllFigures() {
-        //tmap.sort(new AreaComparator());
-
         for (Map.Entry<Integer, Figure> item : tmap.entrySet()) {
             Figure temp = item.getValue();
-            System.out.printf("%d - %s\n", temp.getId(), temp);
+            System.out.printf("%d - %s\n", temp.getId(), temp.getInfo());
             //System.out.println(temp.area());
         }
     }
@@ -65,8 +63,17 @@ public class Collection {
         }
         list.sort(new AreaComparator());
         for (Figure temp : list) {
-            System.out.printf("%d - %s\n", temp.getId(), temp);
+            System.out.printf("%d - %s\n", temp.getId(), temp.getInfo());
             //System.out.println(temp.area());
         }
+    }
+
+    public Figure getFigure(int id) {
+        return tmap.get(id);
+    }
+
+    public void setFigure(int id, String[] p) {
+        int[] temp = Stream.of(p).mapToInt(Integer::parseInt).toArray();
+        tmap.get(id).setParam(temp);
     }
 }

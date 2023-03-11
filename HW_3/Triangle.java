@@ -35,6 +35,12 @@ public class Triangle extends Polygon {
 
     @Override
     public String getName() {
-        return String.format("(%d) треугольник", this.id);
+        return String.format("треугольник");
+    }
+    
+    @Override
+    public String getInfo() {
+        return String.format("(%d) %s   стророны: %d, %d, %d    площадь: %.2f    периметр: %.2f", 
+        this.id, this.getName(), args[0], args[1], args[2], this.area(), this.perimeter());
     }
 }

@@ -19,6 +19,12 @@ public final class Square extends Rectangle {
 
     @Override
     public String getName() {
-        return String.format("(%d) квадрат", this.getId());
+        return String.format("квадрат");
+    }
+
+    @Override
+    public String getInfo() {
+        return String.format("(%d) %s       стророна: %d    площадь: %.2f    периметр: %.2f", 
+        this.getId(), this.getName(), args[0], this.area(), this.perimeter());
     }
 }

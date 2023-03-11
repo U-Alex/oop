@@ -34,7 +34,21 @@ public class Circle extends Figure implements InterfaceCircumference {
 
     @Override
     public String getName() {
-        return String.format("(%d) круг", this.id);
+        return String.format("круг");
+    }
+
+    @Override
+    public String getInfo() {
+        return String.format("(%d) %s          радиус: %d    площадь: %.2f    длина окружности: %.2f", 
+        this.id, this.getName(), this.radius, this.area(), this.circumference());
+    }
+
+    @Override
+    protected void setParam(int[] args) {
+        if (args[0] <= 0) {
+            System.out.printf("неверные входные параметры (radius <= 0)\n");
+        }
+        else this.radius = args[0];
     }
 
 }

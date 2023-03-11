@@ -25,6 +25,15 @@ public class Main {
                 continue;
             }
 
+            if (num == 2) {
+                coll.infoAllFigures();
+                System.out.printf("выберите интересующую фигуру (0 -> выход) ");
+                num = user.inputNum(iScanner, user.typeList.size());
+                if (num == 0) continue;
+                String[] param = user.changeParam(iScanner, coll.getFigure(num));
+                if (param != null) coll.setFigure(num, param);
+                continue;
+            }
 
             if (num == 3) {
                 coll.infoAllFigures();
@@ -37,7 +46,7 @@ public class Main {
             if (num == 4) {
                 coll.infoAllFigures();
                 System.out.printf("выберите интересующую фигуру (0 -> выход) ");
-                num = user.inputNum(iScanner, null);
+                num = user.inputNum(iScanner, Figure.totalId);
                 if (num != 0) coll.infoFigure(num);
                 continue;
             }

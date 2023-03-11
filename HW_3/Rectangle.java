@@ -30,7 +30,13 @@ public class Rectangle extends Polygon{
 
     @Override
     public String getName() {
-        return String.format("(%d) прямоугольник", this.id);
+        return String.format("прямоугольник");
+    }
+
+    @Override
+    public String getInfo() {
+        return String.format("(%d) %s стророны: %d, %d    площадь: %.2f    периметр: %.2f", 
+        this.id, this.getName(), args[0], args[1], this.area(), this.perimeter());
     }
 
 }

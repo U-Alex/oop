@@ -19,4 +19,16 @@ public abstract class Polygon extends Figure implements InterfacePerimeter{
         return true;
     }
 
+    @Override
+    protected void setParam(int[] argsNew) {
+        for (int i : argsNew) {
+            if (i <= 0) {
+                System.out.printf("неверные входные параметры\n");
+                return;
+            }
+        }
+        for (int i = 0; i < argsNew.length; i++) {
+            this.args[i] = argsNew[i];
+        }
+    }
 }
