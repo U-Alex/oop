@@ -15,8 +15,8 @@ public class UserInput {
         opList.put("2", "изменить фигуру");
         opList.put("3", "удалить фигуру");
         opList.put("4", "информация о фигуре");
-        opList.put("5", "информация о всех фигурах");
-        opList.put("6", "сортировка по площади");
+        opList.put("5", "список фигур (сорт.по id)");
+        opList.put("6", "список фигур (сорт.по площади)");
         typeList = new TreeMap<>();
         typeList.put("1", "треугольник");
         typeList.put("2", "прямоугольник");

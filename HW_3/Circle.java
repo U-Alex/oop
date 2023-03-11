@@ -2,7 +2,7 @@ package HW_3;
 
 import java.lang.Math;
 
-public class Circle extends Figure implements InterfaceArea, InterfaceCircumference {
+public class Circle extends Figure implements InterfaceCircumference {
     private int id;
     private int radius;
 
@@ -36,5 +36,5 @@ public class Circle extends Figure implements InterfaceArea, InterfaceCircumfere
     public String getName() {
         return String.format("(%d) круг", this.id);
     }
-    
+
 }

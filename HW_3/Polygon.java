@@ -1,6 +1,6 @@
 package HW_3;
 
-public abstract class Polygon extends Figure implements InterfaceArea, InterfacePerimeter{
+public abstract class Polygon extends Figure implements InterfacePerimeter{
     protected Integer[] args;
 
     protected Polygon(Integer[] args) throws MyException {

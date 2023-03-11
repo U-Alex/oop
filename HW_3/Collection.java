@@ -2,6 +2,9 @@ package HW_3;
 
 import java.util.Map;
 import java.util.TreeMap;
+import java.util.ArrayList;
+//import java.util.Comparator;
+import java.util.List;
 
 public class Collection {
     private TreeMap<Integer, Figure> tmap;
@@ -9,10 +12,10 @@ public class Collection {
     public Collection() throws MyException {
         tmap = new TreeMap<>();
 
-        this.tmap.put(1, new Triangle(new Integer[]{8, 10, 4}));
-        this.tmap.put(2, new Rectangle(new Integer[]{20, 11}));
-        this.tmap.put(3, new Square(30));
-        this.tmap.put(4, new Circle(100));
+        this.tmap.put(1, new Triangle(new Integer[]{8, 10, 9}));
+        this.tmap.put(2, new Rectangle(new Integer[]{20, 21}));
+        this.tmap.put(3, new Square(20));
+        this.tmap.put(4, new Circle(10));
     }
  
     public void addFigure(int num, String[] p) throws MyException, NumberFormatException {
@@ -46,9 +49,24 @@ public class Collection {
     }
 
     public void infoAllFigures() {
+        //tmap.sort(new AreaComparator());
+
         for (Map.Entry<Integer, Figure> item : tmap.entrySet()) {
             Figure temp = item.getValue();
             System.out.printf("%d - %s\n", temp.getId(), temp);
+            //System.out.println(temp.area());
+        }
+    }
+
+    public void sortAllFigures() {
+        List<Figure> list = new ArrayList<>();
+        for (Map.Entry<Integer, Figure> item : tmap.entrySet()) {
+            list.add(item.getValue());
+        }
+        list.sort(new AreaComparator());
+        for (Figure temp : list) {
+            System.out.printf("%d - %s\n", temp.getId(), temp);
+            //System.out.println(temp.area());
         }
     }
 }

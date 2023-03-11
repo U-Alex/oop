@@ -19,6 +19,7 @@ public class Main {
                 System.out.println("выберите тип фигуры: (0 -> выход)");
                 user.printTypeList();
                 num = user.inputNum(iScanner, user.typeList.size());
+                if (num == 0) continue;
                 String[] param = user.inputParam(iScanner, num);
                 if (param != null) coll.addFigure(num, param);
                 continue;
@@ -43,6 +44,11 @@ public class Main {
 
             if (num == 5) {
                 if (num != 0) coll.infoAllFigures();;
+                continue;
+            }
+
+            if (num == 6) {
+                if (num != 0) coll.sortAllFigures();;
                 continue;
             }
 
