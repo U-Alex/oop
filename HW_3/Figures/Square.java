@@ -1,4 +1,7 @@
-package HW_3;
+package HW_3.Figures;
+
+import HW_3.Figure;
+import HW_3.MyException;
 
 public final class Square extends Rectangle {
     private int id;

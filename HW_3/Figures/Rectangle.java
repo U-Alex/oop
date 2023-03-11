@@ -1,4 +1,8 @@
-package HW_3;
+package HW_3.Figures;
+
+import HW_3.Figure;
+import HW_3.MyException;
+import HW_3.Polygon;
 
 public class Rectangle extends Polygon{
     private int id;

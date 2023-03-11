@@ -1,6 +1,10 @@
-package HW_3;
+package HW_3.Figures;
 
 import java.lang.Math;
+
+import HW_3.Figure;
+import HW_3.MyException;
+import HW_3.Interfaces.*;
 
 public class Circle extends Figure implements InterfaceCircumference {
     private int id;

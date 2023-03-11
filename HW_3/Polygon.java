@@ -1,5 +1,7 @@
 package HW_3;
 
+import HW_3.Interfaces.*;
+
 public abstract class Polygon extends Figure implements InterfacePerimeter{
     protected Integer[] args;
 

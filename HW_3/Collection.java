@@ -3,6 +3,9 @@ package HW_3;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.stream.Stream;
+
+import HW_3.Figures.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
