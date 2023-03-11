@@ -9,8 +9,8 @@ public abstract class Figure {
 
     protected abstract Integer getId();
     protected abstract String getName();
-    
-    protected abstract Double perimeter();  //периметр
-    protected abstract Double area();       //площадь
+    //protected abstract boolean checkValid(Integer[] args);
+    //protected abstract Double perimeter();  //периметр
+    //protected abstract Double area();       //площадь
     
 }

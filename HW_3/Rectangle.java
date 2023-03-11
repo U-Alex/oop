@@ -1,37 +1,26 @@
 package HW_3;
 
-public class Rectangle extends Figure{
+public class Rectangle extends Polygon{
     private int id;
-    private int a;
-    private int b;
 
-    public Rectangle(int a, int b) throws MyException {
-        this.a = a;
-        this.b = b;
-        this.id = Figure.totalId;
-        if (!this.checkValid(a, b)) {
+    public Rectangle(Integer[] args) throws MyException {
+        super(args);
+        if (args.length != 2 || !this.checkValid(args)) {
             Figure.totalId--;
-            throw new MyException("неверные входные параметры (a or b <= 0)");
+            throw new MyException("неверное входные параметры ( <= 0)");
         }
+        this.id = Figure.totalId;
     }
-    
-    public Rectangle(int a) {
-        this.a = a;
-        this.b = a;
-    }
-
-    private boolean checkValid(int a, int b) {
-        return (a > 0) && (b > 0);
+    protected Rectangle(int a) throws MyException {
+        this(new Integer[]{a, a});
     }
 
-    @Override
-    protected Double perimeter() {
-        return (this.a + this.b) * 2.;
+    public Double perimeter() {
+        return (args[0] + args[1]) * 2.;
     }
 
-    @Override
-    protected Double area() {
-        return (double) (this.a * this.b);
+    public Double area() {
+        return (double) (args[0] * args[1]);
     }
 
     @Override

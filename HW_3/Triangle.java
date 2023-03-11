@@ -2,37 +2,30 @@ package HW_3;
 
 import java.lang.Math;
 
-public class Triangle extends Figure {
+public class Triangle extends Polygon {
     private int id;
-    private int a;
-    private int b;
-    private int c;
 
-    public Triangle(int a, int b, int c) throws MyException {
-        this.a = a;
-        this.b = b;
-        this.c = c;
-        this.id = Figure.totalId;
-        if (!this.checkValid(a, b, c)) {
+    public Triangle(Integer[] args) throws MyException {
+        super(args);
+        if (args.length != 3 || !this.checkValid(args)) {
             Figure.totalId--;
             throw new MyException("неверные входные параметры (a, b, c <= 0 OR a >= b + c...)");
         }
-    }
-
-    private boolean checkValid(int a, int b, int c) {
-        return (a > 0) && (b > 0) && (c > 0)  &&
-               (a < b + c) && (b < a + c) && (c < a + b);
+        this.id = Figure.totalId;
     }
 
     @Override
-    protected Double perimeter() {
-        return (this.a + this.b + this.c) / 2.;
+    protected boolean checkValid(Integer[] args) {
+        return (args[0] < args[1] + args[2]) && (args[1] < args[0] + args[2]) && (args[2] < args[0] + args[1]);
     }
 
-    @Override
-    protected Double area() {
-        Double p = this.perimeter();
-        return Math.sqrt(p * (p-a) * (p-b) * (p-c));
+    public Double perimeter() {
+        return (double) (this.args[0] + this.args[1] + this.args[2]);
+    }
+
+    public Double area() {
+        Double p = this.perimeter() / 2;
+        return Math.sqrt(p * (p-args[0]) * (p-args[1]) * (p-args[2]));
     }
 
     @Override

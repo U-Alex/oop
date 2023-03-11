@@ -2,30 +2,28 @@ package HW_3;
 
 import java.lang.Math;
 
-public class Circle extends Figure{
+public class Circle extends Figure implements InterfaceArea, InterfaceCircumference {
     private int id;
     private int radius;
 
     public Circle(int r) throws MyException {
         this.radius = r;
         this.id = Figure.totalId;
-        if (!this.checkValid(r)) {
+        if (r <= 0) {//(!this.checkValid(r)) {
             Figure.totalId--;
             throw new MyException("неверные входные параметры (radius <= 0)");
         }
     }
 
-    private boolean checkValid(int r) {
-        return r > 0;
-    }
+    //private boolean checkValid(int r) {
+    //    return r > 0;
+    //}
 
-    @Override
-    protected Double perimeter() {
+    public Double circumference() {
         return Math.PI * this.radius * 2;
     }
 
-    @Override
-    protected Double area() {
+    public Double area() {
         return Math.PI * this.radius * this.radius;
     }
 

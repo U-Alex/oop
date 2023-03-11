@@ -5,11 +5,11 @@ public final class Square extends Rectangle {
 
     public Square(int a) throws MyException {
         super(a);
+        //if (args.length != 1 || !this.checkValid(args)) {
+        //    Figure.totalId--;
+        //    throw new MyException("неверное входные параметры (a <= 0)");
+        //}
         this.id = Figure.totalId;
-        if (a <= 0) {
-            Figure.totalId--;
-            throw new MyException("неверные входные параметры (a <= 0)");
-        }
     }
     
     @Override
